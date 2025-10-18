@@ -115,12 +115,14 @@ Check out the bot live here: [https://whatsapp-bot-site.vercel.app/](https://wha
                        
 ## ⚡ Features
 
-[![Always Online](https://img.shields.io/badge/Always_Online-Active-brightgreen)]()
-[![Auto Typing](https://img.shields.io/badge/Auto_Typing-Enabled-yellow)]()
-[![Auto Recording](https://img.shields.io/badge/Auto_Recording-On-orange)]()
-[![Auto Status View](https://img.shields.io/badge/Auto_Status_View-Yes-blue)]()
-[![Auto Status React](https://img.shields.io/badge/Auto_Status_React-Yes-purple)]()
-[![Auto Responses](https://img.shields.io/badge/Auto_Responses-Yes-lightgrey)]()
+ <p align="center">
+  <img src="https://img.shields.io/badge/Always_Online-Active-brightgreen?style=for-the-badge&logo=ghost&logoColor=white&color=00ff00&labelColor=000000&animation=glow" alt="Always Online" />
+  <img src="https://img.shields.io/badge/Auto_Typing-Enabled-yellow?style=for-the-badge&logo=keyboard&logoColor=white&color=ffff00&labelColor=000000&animation=glow" alt="Auto Typing" />
+  <img src="https://img.shields.io/badge/Auto_Recording-On-orange?style=for-the-badge&logo=microphone&logoColor=white&color=ff7f00&labelColor=000000&animation=glow" alt="Auto Recording" />
+  <img src="https://img.shields.io/badge/Auto_Status_View-Yes-blue?style=for-the-badge&logo=eye&logoColor=white&color=007fff&labelColor=000000&animation=glow" alt="Auto Status View" />
+  <img src="https://img.shields.io/badge/Auto_Status_React-Yes-purple?style=for-the-badge&logo=smile&logoColor=white&color=8f00ff&labelColor=000000&animation=glow" alt="Auto Status React" />
+  <img src="https://img.shields.io/badge/Auto_Responses-Yes-lightgrey?style=for-the-badge&logo=robot&logoColor=white&color=cccccc&labelColor=000000&animation=glow" alt="Auto Responses" />
+</p>
 
 - Deployable on **Vercel**, **Render**, **Heroku**, **Railway**, or **Termux**  
 - Easy integration with WhatsApp Business accounts  
