@@ -193,3 +193,17 @@ CAILLMAXX
    ```bash
    git clone https://github.com/maxxy1470/CAILLMAXX.git
    cd CAILLMAXX
+
+
+## 🙏 Thanks For Using MAXX~XMD
+
+We appreciate your support and encourage you to:
+- ⭐ Star the project
+- 🔄 Share it with others
+- 🚀 Contribute improvements
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/Extreamedeone/EXTREAME-XMD?style=social" alt="GitHub Stars"/>
+</p>
+
+<p align="center"><strong>Made with 💥 by Carly Maxx | Powered by 🔥MAXX TECH 🔥</strong></p>
