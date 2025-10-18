@@ -203,7 +203,7 @@ We appreciate your support and encourage you to:
 - 🚀 Contribute improvements
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/Extreamedeone/EXTREAME-XMD?style=social" alt="GitHub Stars"/>
+  <img src="https://img.shields.io/github/stars/Carlymaxx/MAXX-XMD?style=social" alt="GitHub Stars"/>
 </p>
 
 <p align="center"><strong>Made with 💥 by Carly Maxx | Powered by 🔥MAXX TECH 🔥</strong></p>
