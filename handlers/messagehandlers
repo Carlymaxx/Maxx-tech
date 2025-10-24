@@ -1,0 +1,20 @@
+module.exports = async function handleMessage(bot, msg) {
+  const messageText = msg.messages[0].message?.conversation;
+  if (!messageText) return;
+
+  const prefix = "."; // your prefix
+  if (!messageText.startsWith(prefix)) return;
+
+  const args = messageText.slice(prefix.length).trim().split(/ +/);
+  const commandName = args.shift().toLowerCase();
+
+  const command = bot.commands.get(commandName);
+  if (command) {
+    try {
+      await command.execute(bot, msg.messages[0], args);
+    } catch (err) {
+      console.error(err);
+      await bot.sendMessage(msg.messages[0].key.remoteJid, { text: '❌ Error executing command!' });
+    }
+  }
+};
