@@ -3,7 +3,7 @@
   "version": "3.2.0",
   "description": "Advanced WhatsApp bot built with Baileys — powered by Carly Maxx",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "engines": {
     "node": ">=20.0.0"
   },
