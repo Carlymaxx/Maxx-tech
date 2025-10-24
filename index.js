@@ -1,4 +1,3 @@
-const handleMessage = require('./handlers/messageHandler');
 // MAXX~XMD BOT ⚡
 // Developed by Carly Maxx
 // Combined version — Baileys + Utilities
@@ -13,7 +12,7 @@ import { exec } from "child_process";
 import path from "path";
 import gtts from "node-gtts";
 import translatte from "translatte";
-import waStickerPkg from "wa-sticker-formatter"; // CommonJS fix
+import waStickerPkg from "wa-sticker-formatter";
 const { toBuffer } = waStickerPkg;
 import makeWASocket, {
   useMultiFileAuthState,
@@ -21,13 +20,15 @@ import makeWASocket, {
   DisconnectReason
 } from "@whiskeysockets/baileys";
 
+// ✅ Import your message handler (ESM-style import)
+import handleMessage from "./handlers/messageHandler.js";
+
 dotenv.config();
 
 const BOT_NAME = "MAXX~XMD";
 const OWNER_NAME = "Carly Maxx";
 const OWNER_NUMBER = "254100638635";
 const AUTH_DIR = "./auth_info";
-
 
 async function startBot() {
   console.log(chalk.blue("🚀 Starting MAXX~XMD WhatsApp Bot..."));
