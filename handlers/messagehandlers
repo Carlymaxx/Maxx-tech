@@ -1,20 +1,21 @@
-module.exports = async function handleMessage(bot, msg) {
-  const messageText = msg.messages[0].message?.conversation;
-  if (!messageText) return;
+// handlers/messageHandler.js
+export default async function handleMessage(sock, msg) {
+  try {
+    const messageContent = msg.message?.conversation || msg.message?.extendedTextMessage?.text;
+    if (!messageContent) return;
 
-  const prefix = "."; // your prefix
-  if (!messageText.startsWith(prefix)) return;
+    const sender = msg.key.remoteJid;
+    const text = messageContent.trim().toLowerCase();
 
-  const args = messageText.slice(prefix.length).trim().split(/ +/);
-  const commandName = args.shift().toLowerCase();
+    console.log('[💬] ${sender}: ${text}');
 
-  const command = bot.commands.get(commandName);
-  if (command) {
-    try {
-      await command.execute(bot, msg.messages[0], args);
-    } catch (err) {
-      console.error(err);
-      await bot.sendMessage(msg.messages[0].key.remoteJid, { text: '❌ Error executing command!' });
+    // Simple command examples
+    if (text === "ping") {
+      await sock.sendMessage(sender, { text: "Pong ✅" });
+    } else if (text === "hi" || text === "hello") {
+      await sock.sendMessage(sender, { text: "👋 Hello! I'm MAXX~XMD bot." });
     }
+  } catch (err) {
+    console.error("❌ Error in handleMessage:", err);
   }
-};
+}
