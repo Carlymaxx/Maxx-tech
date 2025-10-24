@@ -1,25 +1,33 @@
 module.exports = {
-  name: "menu", // command name, use with your prefix, e.g., .menu
-  description: "Shows the MAXX-XMD bot menu",
-  execute: async (bot, msg, args) => {
-    // You can customize this menu message however you like
-    const menuMessage = `
-👋 Hello! I am *MAXX-XMD Bot* 🤖
+  name: "menu", // command name
+  description: "Shows the bot menu",
 
-📜 *BOT MENU*
+  async execute(bot, message, args) {
+    const from = message.key.remoteJid;
 
-1️⃣ Fun Commands
-2️⃣ AI Commands
-3️⃣ Owner Commands
-4️⃣ Group Commands
-5️⃣ Other Commands
+    // Example menu text
+    const menuText = `
+👋 Hello! I'm *Carly Maxx* 🤖
+Here are my available commands:
 
-Type the command with prefix to run it. Example: *.ping*
+*Fun Commands*
+- .ping → check bot status
+- .joke → random joke
+- .meme → random meme
 
-Owner: Carly Maxx
+*Utility Commands*
+- .menu → show this menu
+- .alive → bot status
+- .help → help guide
+
+*Owner Commands*
+- .ban → ban user
+- .unban → unban user
+
+⚡ Powered by MAXX-XMD
 `;
 
-    // Send the message back to the chat
-    await bot.sendMessage(msg.from, { text: menuMessage });
-  }
+    // Send menu as text
+    await bot.sendMessage(from, { text: menuText });
+  },
 };
