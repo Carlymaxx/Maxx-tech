@@ -1,3 +1,4 @@
+const handleMessage = require('./handlers/messageHandler');
 // MAXX~XMD BOT ⚡
 // Developed by Carly Maxx
 // Combined version — Baileys + Utilities
