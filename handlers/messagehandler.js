@@ -14,12 +14,12 @@ export default async function handleMessage(sock, msg) {
     console.log(`[📩] ${sender}: ${text}`);
 
     // Simple direct responses
-    if (lowerText  "ping") {
+    if (lowerText === "ping") {
       await sock.sendMessage(sender, { text: "Pong ✅" });
       return;
     }
 
-    if (lowerText  "hi" || lowerText  "hello") {
+    if (lowerText === "hi" || lowerText === "hello") {
       await sock.sendMessage(sender, { text: "👋 Hello! I'm MAXX~XMD bot." });
       return;
     }
@@ -60,7 +60,7 @@ Here are my available commands:
 
           const url = args[0];
           const response = await fetch(
-            https://api.tiklydown.me/api/download?url=${url}
+            `https://api.tiklydown.me/api/download?url=${url}`
           );
           const data = await response.json();
 
