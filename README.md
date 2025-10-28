@@ -191,8 +191,8 @@ CAILLMAXX
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/maxxy1470/CAILLMAXX.git
-   cd CAILLMAXX
+   git clone https://github.com/Carlymaxx/Maxx-tech.git
+   cd Maxx-tech
 
 
 ## 🙏 Thanks For Using MAXX~XMD
