@@ -23,8 +23,8 @@ module.exports = {
 
   OWNER_NUMBER: "0725979273",
   OWNER_NAME: getConfig("OWNER_NAME") || process.env.OWNER_NAME || "Carly Maxx",
-  DEV: process.env.DEV || "254740007567",
-  DEVELOPER_NUMBER: '254740007567@s.whatsapp.net',
+  DEV: process.env.DEV || "254725979273",
+  DEVELOPER_NUMBER: '254725979273@s.whatsapp.net',
   
   MENU_AUDIO_URL: getConfig("MENU_AUDIO_URL") || process.env.MENU_AUDIO_URL || 'https://files.catbox.moe/vkvci3.mp3',
   AUDIO_URL: getConfig("AUDIO_URL") || process.env.AUDIO_URL || 'https://files.catbox.moe/vkvci3.mp3',
@@ -72,7 +72,7 @@ module.exports = {
   GOODBYE: getConfig("GOODBYE") || process.env.GOODBYE || "false",
   ADMIN_ACTION: getConfig("ADMIN_ACTION") || process.env.ADMIN_ACTION || "false",
   version: process.env.version || "1.5.0",
-  TIMEZONE: settings.TIMEZONE || process.env.TIMEZONE || "Africa/Harare",
+  TIMEZONE: settings.TIMEZONE || process.env.TIMEZONE || "Nairobi/Ruiru",
 
   MENU_IMAGES: {
     '1': process.env.DOWNLOAD_MENU_IMAGE || "https://url.maxx-xmd.online/Maxx.0dhfcjpi.jpeg",

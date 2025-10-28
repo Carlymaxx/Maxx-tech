@@ -1,7 +1,15 @@
-// handlers/messageHandler.js
-import fetch from "node-fetch";
+const fs = require("fs");
+const path = require("path");
 
-export default async function handleMessage(sock, msg) {
+// Load all commands dynamically
+const commands = {};
+const commandFiles = fs.readdirSync(path.join(__dirname, "../commands")).filter(file => file.endsWith(".js"));
+for (const file of commandFiles) {
+  const command = require(../commands/${file});
+  commands[command.name] = command;
+}
+
+module.exports = async function handleMessage(sock, msg) {
   try {
     const messageContent =
       msg.message?.conversation || msg.message?.extendedTextMessage?.text;
@@ -9,79 +17,22 @@ export default async function handleMessage(sock, msg) {
 
     const sender = msg.key.remoteJid;
     const text = messageContent.trim();
-    const lowerText = text.toLowerCase();
 
-    console.log(`[📩] ${sender}: ${text}`);
+    console.log([📩] ${sender}: ${text});
 
-    // Simple direct responses
-    if (lowerText === "ping") {
-      await sock.sendMessage(sender, { text: "Pong ✅" });
-      return;
+    if (!text.startsWith(".")) return; // Only handle commands with '.' prefix
+
+    const args = text.split(/\s+/);
+    const commandName = args.shift().slice(1).toLowerCase();
+
+    const command = commands[commandName];
+    if (!command) {
+      return await sock.sendMessage(sender, { text: "❌ Unknown command. Type .menu to see available commands." });
     }
 
-    if (lowerText === "hi" || lowerText === "hello") {
-      await sock.sendMessage(sender, { text: "👋 Hello! I'm MAXX~XMD bot." });
-      return;
-    }
+    await command.execute(sock, sender, args);
 
-    // Prefix-based command handling
-    if (!text.startsWith("!")) return; // Only commands with '!' prefix
-
-    const args = text.trim().split(/\s+/);
-    const command = args.shift().slice(1).toLowerCase(); // remove '!' prefix
-
-    const reply = async (msgText) => {
-      await sock.sendMessage(sender, { text: msgText });
-    };
-
-    switch (command) {
-      case "ping":
-        reply("✅ MAXX~XMD is online and running smoothly!");
-        break;
-
-      case "menu":
-        reply(`*📜 MAXX~XMD MAIN MENU 📜*
-
-👋 Hi there!
-Here are my available commands:
-
-> ⚡ !ping – Check if I’m online
-> 🎥 !tiktok <url> – Download a TikTok video
-> 🧾 !menu – Show this menu
-
-💡 Tip: More features coming soon!*
-`);
-        break;
-
-      case "tiktok":
-        try {
-          if (!args[0]) return reply("Please provide a TikTok link!");
-          reply("⏳ Fetching your TikTok video...");
-
-          const url = args[0];
-          const response = await fetch(
-            `https://api.tiklydown.me/api/download?url=${url}`
-          );
-          const data = await response.json();
-
-          if (data && data.video && data.video.noWatermark) {
-            await sock.sendMessage(sender, {
-              video: { url: data.video.noWatermark },
-              caption: "🎬 Here is your TikTok video!",
-            });
-          } else {
-            reply("❌ Failed to fetch TikTok video. Please check the URL.");
-          }
-        } catch (error) {
-          console.error("TikTok command error:", error);
-          reply("⚠ An error occurred while processing your request.");
-        }
-        break;
-
-      default:
-        reply("❓ Unknown command. Type !menu to see available commands.");
-    }
   } catch (err) {
     console.error("❌ Error in handleMessage:", err);
   }
-}
+};

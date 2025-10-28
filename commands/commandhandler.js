@@ -1,16 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
-const commands = new Map();
+const commands = {};
+const commandDir = path.join(__dirname, "../commands");
 
-// Load all command files
-const commandFiles = fs.readdirSync(path.join(__dirname, "commands")).filter(file => file.endsWith(".js"));
+fs.readdirSync(commandDir).forEach(file => {
+  if (file.endsWith(".js")) {
+    const command = require(path.join(commandDir, file));
+    commands[command.name] = command;
+  }
+});
 
-for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
-  commands.set(command.name, command);
-}
-
-module.exports = {
-  commands
-};
+module.exports = commands;

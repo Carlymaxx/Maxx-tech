@@ -42,3 +42,5 @@ build/
 .idea/
 *.sublime-project
 *.sublime-workspace
+# Ignore all auth_info files
+auth_info/

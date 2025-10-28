@@ -1,33 +1,21 @@
+const moment = require("moment-timezone");
+
 module.exports = {
-  name: "menu", // command name
-  description: "Shows the bot menu",
+  name: "menu",
+  description: "Show bot menu and info",
+  execute: async (sock, sender) => {
+    const nairobiTime = moment().tz("Africa/Nairobi").format("HH:mm:ss");
+    const nairobiDate = moment().tz("Africa/Nairobi").format("YYYY-MM-DD");
 
-  async execute(bot, message, args) {
-    const from = message.key.remoteJid;
+    await sock.sendMessage(sender, {
+      image: { url: "https://ibb.co/jZhpV4Vb.jpg" },
+      caption: `*MAXX~XMD Bot is Alive ✅*
+Welcome to the real bot made by Carly Maxx!
 
-    // Example menu text
-    const menuText = `
-👋 Hello! I'm *Carly Maxx* 🤖
-Here are my available commands:
+🕒 Time (Nairobi, Ruiru): ${nairobiTime}
+📅 Date: ${nairobiDate}
 
-*Fun Commands*
-- .ping → check bot status
-- .joke → random joke
-- .meme → random meme
-
-*Utility Commands*
-- .menu → show this menu
-- .alive → bot status
-- .help → help guide
-
-*Owner Commands*
-- .ban → ban user
-- .unban → unban user
-
-⚡ Powered by MAXX-XMD
-`;
-
-    // Send menu as text
-    await bot.sendMessage(from, { text: menuText });
-  },
+Type .ping to check bot status`
+    });
+  }
 };
