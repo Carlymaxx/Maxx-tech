@@ -11,7 +11,7 @@ module.exports = (bot) => {
     const command = require(path.join(commandsPath, file));
     if (command.name) {
       bot.commands.set(command.name, command);
-      console.log(✅ Loaded command: ${command.name});
+      console.log(`✅ Loaded command: ${command.name}`);
     }
   }
 };

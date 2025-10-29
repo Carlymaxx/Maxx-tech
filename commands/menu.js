@@ -19,3 +19,28 @@ Type .ping to check bot status`
     });
   }
 };
+module.exports = {
+    name: "menu",
+    alias: ["help"],
+    desc: "Display bot menu",
+    run: async (sock, msg, args, from, info) => {
+
+        const text = `
+┌──⭓ ${info.botName} MENU
+│
+│ 👤 Owner: ${info.ownerName}
+│ 🆔 Prefix: ${info.prefix}
+│
+│ 📌 Available Commands:
+│ • menu
+│ • ping
+│ • welcome
+│ • goodbye
+│ • antidelete
+│
+└──────────────⭓
+        `;
+
+        await sock.sendMessage(from, { text }, { quoted: msg });
+    }
+};

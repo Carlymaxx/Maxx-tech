@@ -1,5 +1,5 @@
 module.exports = {
-  SESSION_ID: "",  // add your Session Id here
+  SESSION_ID: "maxx-session",  // add your Session Id here
   
   OWNER_NUMBER: "254725979273", // Owner: Carly Maxx
   

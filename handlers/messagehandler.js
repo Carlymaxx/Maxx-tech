@@ -5,8 +5,13 @@ const path = require("path");
 const commands = {};
 const commandFiles = fs.readdirSync(path.join(__dirname, "../commands")).filter(file => file.endsWith(".js"));
 for (const file of commandFiles) {
-  const command = require(../commands/${file});
-  commands[command.name] = command;
+  const commandPath = path.join(__dirname, "../commands", file);
+  try {
+    const command = require(commandPath);
+    if (command && command.name) commands[command.name] = command;
+  } catch (err) {
+    console.warn(`⚠ Failed to load command file ${file}:`, err.message);
+  }
 }
 
 module.exports = async function handleMessage(sock, msg) {
@@ -18,7 +23,7 @@ module.exports = async function handleMessage(sock, msg) {
     const sender = msg.key.remoteJid;
     const text = messageContent.trim();
 
-    console.log([📩] ${sender}: ${text});
+    console.log(`[📩] ${sender}: ${text}`);
 
     if (!text.startsWith(".")) return; // Only handle commands with '.' prefix
 
