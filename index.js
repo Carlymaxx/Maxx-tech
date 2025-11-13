@@ -40,45 +40,42 @@ async function startBot() {
     });
 
     // Command handling
-    sock.commands = new Map();
-    const commandFiles = fs.existsSync("./commands")
-        ? fs.readdirSync("./commands").filter(f => f.endsWith(".js"))
-        : [];
+ sock.ev.on('messages.upsert', async ({ messages }) => {
+    if (!messages || messages.length === 0) return;
 
-    for (const file of commandFiles) {
-        const command = require(`./commands/${file}`);
-        if (command?.name && command?.execute) {
-            sock.commands.set(command.name.toLowerCase(), command);
-            console.log(`✅ Loaded command: ${command.name}`);
-        }
+    const msg = messages[0];
+
+    // ✅ Ignore messages without content
+    if (!msg || !msg.key || !msg.message) return;
+
+    // Get the sender's ID safely
+    const chatId = msg.key.remoteJid;
+
+    // Get message text safely
+    let text =
+        msg.message.conversation ||
+        msg.message.extendedTextMessage?.text ||
+        msg.message.imageMessage?.caption ||
+        msg.message.videoMessage?.caption ||
+        "";
+
+    // Ignore non-command messages (not starting with .)
+    if (!text.startsWith(".")) return;
+
+    const args = text.slice(1).trim().split(/ +/);
+    const cmdName = args.shift().toLowerCase();
+
+    const command = sock.commands.get(cmdName);
+    if (!command) return;
+
+    try {
+        await command.execute(sock, msg, args, chatId);
+    } catch (err) {
+        console.log("Command Error:", err);
+        await sock.sendMessage(chatId, { text: "⚠ Command Failed!" });
     }
+});
 
-    // Message handler
-    sock.ev.on("messages.upsert", async ({ messages }) => {
-        const msg = messages[0];
-        if (!msg.message) return;
-
-        let text =
-            msg.message.conversation ||
-            msg.message.extendedTextMessage?.text ||
-            msg.message.imageMessage?.caption ||
-            msg.message.videoMessage?.caption ||
-            "";
-
-        if (!text.startsWith(".")) return;
-
-        const args = text.slice(1).trim().split(/ +/);
-        const cmdName = args.shift().toLowerCase();
-        const command = sock.commands.get(cmdName);
-        if (!command) return;
-
-        try {
-            await command.execute(sock, msg, args, msg.key.remoteJid);
-        } catch (err) {
-            console.log("⚠ Command Error:", err);
-            await sock.sendMessage(msg.key.remoteJid, { text: "⚠ Command Failed!" });
-        }
-    });
 }
 
 // Start the bot
