@@ -1,75 +1,81 @@
-const express = require("express");
-const path = require("path");
-const fs = require("fs");
-const { default: makeWASocket, DisconnectReason, useMultiFileAuthState } = require("@whiskeysockets/baileys");
+const express = require('express');
+const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion } = require('@whiskeysockets/baileys');
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+
+const PORT = process.env.PORT || 3000;
+const AUTH_FILE = path.join(__dirname, 'session.json');
+const OTP_STORE = {}; // Temporary OTP storage
+
+const { state, saveState } = useSingleFileAuthState(AUTH_FILE);
 
 const app = express();
-app.use(express.static(path.join(__dirname, "public")));
-
-const AUTH_FOLDER = path.join(__dirname, "auth_info_baileys");
-fs.mkdirSync(AUTH_FOLDER, { recursive: true });
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 let sock;
-const otpStore = {}; // { number: code }
 
-// Initialize WhatsApp bot
-async function initBot() {
-    const { state, saveCreds } = await useMultiFileAuthState(AUTH_FOLDER);
-    sock = makeWASocket({ auth: state });
+// Start bot
+async function startBot() {
+    const { version } = await fetchLatestBaileysVersion();
+    sock = makeWASocket({
+        auth: state,
+        version
+    });
 
-    sock.ev.on("creds.update", saveCreds);
+    sock.ev.on('creds.update', saveState);
 
-    sock.ev.on("connection.update", ({ connection, lastDisconnect }) => {
-        if (connection === "open") console.log("✅ BOT CONNECTED!");
-        if (connection === "close") {
-            const shouldReconnect = lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut;
-            if (shouldReconnect) initBot();
+    sock.ev.on('connection.update', (update) => {
+        const { connection, lastDisconnect } = update;
+        if (connection === 'open') console.log('✅ BOT CONNECTED!');
+        if (connection === 'close') {
+            const reason = lastDisconnect?.error?.output?.statusCode;
+            if (reason !== DisconnectReason.loggedOut) startBot();
+        }
+    });
+
+    // Listen to incoming messages for OTP verification
+    sock.ev.on('messages.upsert', async ({ messages }) => {
+        const msg = messages[0];
+        if (!msg.message) return;
+        const text = msg.message.conversation || msg.message.extendedTextMessage?.text;
+        const from = msg.key.remoteJid;
+
+        if (OTP_STORE[from] && OTP_STORE[from].code === text) {
+            // OTP verified
+            const sessionId = crypto.randomBytes(16).toString('hex');
+            await sock.sendMessage(from, { text: `✅ Maxx-XMD linked successfully!\nSession ID:\n${sessionId}` });
+
+            console.log(`User ${from} linked successfully. Session ID: ${sessionId}`);
+            delete OTP_STORE[from];
         }
     });
 }
 
-initBot();
+startBot();
 
-// Send linking code via WhatsApp
-app.get("/send-code", async (req, res) => {
+// Serve simple page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
+// Generate OTP endpoint
+app.post('/generate-otp', async (req, res) => {
+    const { number } = req.body;
+    if (!number) return res.status(400).send('Number required');
+
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    OTP_STORE[`${number}@s.whatsapp.net`] = { code: otp, timestamp: Date.now() };
+
+    // Send OTP to user's WhatsApp
     try {
-        const number = req.query.number;
-        if (!number) return res.json({ error: "No number provided." });
-
-        const code = Math.floor(100000 + Math.random() * 900000).toString();
-        otpStore[number] = code;
-
-        await sock.sendMessage(number + "@s.whatsapp.net", { text: `Your Maxx-XMD linking code is: ${code}` });
-
-        res.json({ message: "✅ Linking code sent to WhatsApp!" });
+        await sock.sendMessage(`${number}@s.whatsapp.net`, { text: `Your Maxx-XMD verification code is: ${otp}` });
+        res.send(`OTP sent to ${number} ✅`);
     } catch (err) {
-        res.json({ error: err.message });
+        console.error(err);
+        res.status(500).send('Failed to send OTP. Make sure the bot is connected.');
     }
 });
 
-// Verify code and generate session
-app.get("/verify-code", async (req, res) => {
-    try {
-        const { number, code } = req.query;
-        if (!number || !code) return res.json({ error: "Number/code missing." });
-
-        if (otpStore[number] !== code) return res.json({ error: "Invalid code." });
-        delete otpStore[number];
-
-        const credsPath = path.join(AUTH_FOLDER, "creds.json");
-        if (!fs.existsSync(credsPath)) return res.json({ error: "Session not ready." });
-
-        const sessionData = fs.readFileSync(credsPath);
-        const sessionBase64 = Buffer.from(sessionData).toString("base64");
-
-        // Send session ID to WhatsApp
-        await sock.sendMessage(number + "@s.whatsapp.net", { text: `✅ Maxx-XMD connected!\nSession ID:\n${sessionBase64}` });
-
-        res.json({ session: sessionBase64 });
-    } catch (err) {
-        res.json({ error: err.message });
-    }
-});
-
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Session generator running on port ${PORT}`));

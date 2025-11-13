@@ -5,62 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maxx-XMD Session Generator</title>
 <style>
-body { font-family: Arial, sans-serif; text-align: center; margin-top: 30px; }
-input { padding: 10px; font-size: 16px; border-radius: 6px; margin: 5px; width: 200px; }
-button { background: #ffb703; border: none; padding: 12px 25px; font-size: 18px; cursor: pointer; border-radius: 8px; color: #000; margin: 5px; }
-pre { background: #000; color: #fff; padding: 20px; margin-top: 20px; border-radius: 8px; word-break: break-all; }
+body { font-family: Arial; text-align: center; padding: 50px; }
+input, button { padding: 10px; font-size: 16px; margin: 10px; }
 </style>
 </head>
 <body>
 <h1>Maxx-XMD Session Generator</h1>
-
-<p>Step 1: Enter your WhatsApp number:</p>
-<input type="text" id="phone" placeholder="2547xxxxxxxx">
-<button id="sendCode">Send Linking Code</button>
-
-<p>Step 2: Enter the 6-digit code you received:</p>
-<input type="text" id="otp" placeholder="6-digit code">
-<button id="generateSession">Generate Session</button>
-
-<p>Step 3: Copy your session ID:</p>
-<pre id="sessionOutput">Waiting for session...</pre>
-<button id="copySession" disabled>Copy to Clipboard</button>
+<p>Type your WhatsApp number (with country code, e.g., 2547xxxxxxx):</p>
+<input type="text" id="number" placeholder="2547xxxxxxx" />
+<button onclick="generateOTP()">Generate OTP</button>
+<p id="msg"></p>
 
 <script>
-const phoneInput = document.getElementById('phone');
-const otpInput = document.getElementById('otp');
-const sessionOutput = document.getElementById('sessionOutput');
-const copyButton = document.getElementById('copySession');
+async function generateOTP() {
+    const number = document.getElementById('number').value.trim();
+    if (!number) return alert('Please type your number');
 
-document.getElementById('sendCode').addEventListener('click', async () => {
-    const phone = phoneInput.value.trim();
-    if (!phone) return alert("Enter a valid number.");
-    const res = await fetch(`/send-code?number=${phone}`);
-    const data = await res.json();
-    alert(data.message || data.error);
-});
-
-document.getElementById('generateSession').addEventListener('click', async () => {
-    const phone = phoneInput.value.trim();
-    const code = otpInput.value.trim();
-    if (!phone || !code) return alert("Enter number and code.");
-    const res = await fetch(`/verify-code?number=${phone}&code=${code}`);
-    const data = await res.json();
-    if (data.session) {
-        sessionOutput.textContent = data.session;
-        copyButton.disabled = false;
-        alert("✅ Session generated & sent to WhatsApp!");
-    } else {
-        sessionOutput.textContent = data.error || "Failed.";
-    }
-});
-
-copyButton.addEventListener('click', () => {
-    navigator.clipboard.writeText(sessionOutput.textContent).then(() => {
-        copyButton.textContent = "Copied!";
-        setTimeout(() => copyButton.textContent = "Copy to Clipboard", 1500);
-    }).catch(() => alert("Failed to copy session."));
-});
+    const res = await fetch('/generate-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ number })
+    });
+    const text = await res.text();
+    document.getElementById('msg').innerText = text;
+}
 </script>
 </body>
 </html>
