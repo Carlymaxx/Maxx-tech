@@ -1,5 +1,4 @@
-
-<!-- Sleek Interactive GitHub Button with Highlight on Hover -->
+<!-- Sleek Interactive GitHub Button (NO API REQUEST) -->
 <div style="
     display: inline-flex;
     align-items: center;
@@ -18,7 +17,9 @@
        onmouseover="this.style.backgroundColor='#333333'" 
        onmouseout="this.style.backgroundColor='transparent'"
        onclick="window.open('https://github.com/Carlymaxx/Maxx-tech', '_blank')">
-    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width:24px; height:24px; filter: invert(100%);">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
+         alt="GitHub" 
+         style="width:24px; height:24px; filter: invert(100%);">
   </div>
 
   <!-- Repo Name -->
@@ -29,8 +30,8 @@
     Carlymaxx/Maxx-tech
   </div>
 
-  <!-- Stars Count -->
-  <div id="star-count" style="
+  <!-- Stars (STATIC NUMBER) -->
+  <div style="
       background-color: #555555;
       padding: 2px 10px;
       border-radius: 12px;
@@ -40,11 +41,11 @@
   " onmouseover="this.style.backgroundColor='#777777'" 
      onmouseout="this.style.backgroundColor='#555555'" 
      onclick="window.open('https://github.com/Carlymaxx/Maxx-tech/stargazers', '_blank')">
-    0 ★
+    ★ 0
   </div>
 
-  <!-- Forks Count -->
-  <div id="fork-count" style="
+  <!-- Forks (STATIC NUMBER) -->
+  <div style="
       background-color: #555555;
       padding: 2px 10px;
       border-radius: 12px;
@@ -54,29 +55,10 @@
   " onmouseover="this.style.backgroundColor='#777777'" 
      onmouseout="this.style.backgroundColor='#555555'" 
      onclick="window.open('https://github.com/Carlymaxx/Maxx-tech/network/members', '_blank')">
-    0 🍴
+    🍴 0
   </div>
 
 </div>
-
-<script>
-  async function updateCounts() {
-    try {
-      const response = await fetch('https://api.github.com/repos/Carlymaxx/Maxx-tech');
-      const data = await response.json();
-      document.getElementById('star-count').textContent = data.stargazers_count + ' ★';
-      document.getElementById('fork-count').textContent = data.forks_count + ' 🍴';
-    } catch (err) {
-      console.error('Error fetching GitHub data:', err);
-    }
-  }
-
-  // Initial load
-  updateCounts();
-
-  // Update every 60 seconds
-  setInterval(updateCounts, 60000);
-</script>
 
 
 
