@@ -1,4 +1,87 @@
 
+<!-- Sleek Interactive GitHub Button with Highlight on Hover -->
+<div style="
+    display: inline-flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    font-family: sans-serif;
+    gap: 10px;
+    padding: 10px 20px;
+">
+
+  <!-- GitHub Logo -->
+  <div style="display:flex; align-items:center; cursor:pointer; padding: 5px; border-radius:6px;"
+       onmouseover="this.style.backgroundColor='#333333'" 
+       onmouseout="this.style.backgroundColor='transparent'"
+       onclick="window.open('https://github.com/Carlymaxx/Maxx-tech', '_blank')">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width:24px; height:24px; filter: invert(100%);">
+  </div>
+
+  <!-- Repo Name -->
+  <div style="cursor:pointer; padding: 5px; border-radius:6px;"
+       onmouseover="this.style.backgroundColor='#333333'" 
+       onmouseout="this.style.backgroundColor='transparent'"
+       onclick="window.open('https://github.com/Carlymaxx/Maxx-tech', '_blank')">
+    Carlymaxx/Maxx-tech
+  </div>
+
+  <!-- Stars Count -->
+  <div id="star-count" style="
+      background-color: #555555;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      cursor:pointer;
+      transition: background-color 0.3s;
+  " onmouseover="this.style.backgroundColor='#777777'" 
+     onmouseout="this.style.backgroundColor='#555555'" 
+     onclick="window.open('https://github.com/Carlymaxx/Maxx-tech/stargazers', '_blank')">
+    0 ★
+  </div>
+
+  <!-- Forks Count -->
+  <div id="fork-count" style="
+      background-color: #555555;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.85em;
+      cursor:pointer;
+      transition: background-color 0.3s;
+  " onmouseover="this.style.backgroundColor='#777777'" 
+     onmouseout="this.style.backgroundColor='#555555'" 
+     onclick="window.open('https://github.com/Carlymaxx/Maxx-tech/network/members', '_blank')">
+    0 🍴
+  </div>
+
+</div>
+
+<script>
+  async function updateCounts() {
+    try {
+      const response = await fetch('https://api.github.com/repos/Carlymaxx/Maxx-tech');
+      const data = await response.json();
+      document.getElementById('star-count').textContent = data.stargazers_count + ' ★';
+      document.getElementById('fork-count').textContent = data.forks_count + ' 🍴';
+    } catch (err) {
+      console.error('Error fetching GitHub data:', err);
+    }
+  }
+
+  // Initial load
+  updateCounts();
+
+  // Update every 60 seconds
+  setInterval(updateCounts, 60000);
+</script>
+
+
+
+
+
 
 
 
