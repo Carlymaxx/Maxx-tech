@@ -1,3 +1,40 @@
+<!-- Custom Dark GitHub Fork Button with Auto-Updating Fork Count -->
+<a href="https://github.com/Carlymaxx/Maxx-tech/fork" target="_blank" style="text-decoration: none;">
+  <div style="
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      transition: background-color 0.3s;
+      cursor: pointer;
+      gap: 10px;
+  " onmouseover="this.style.backgroundColor='#333333'" onmouseout="this.style.backgroundColor='#1e1e1e'">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
+         alt="GitHub" 
+         style="width:24px; height:24px; filter: invert(100%);">
+    <span>Fork on GitHub</span>
+    <span id="fork-count" style="
+        background-color: #555555;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.85em;
+    ">0</span>
+  </div>
+</a>
+
+<script>
+  async function updateForkCount() {
+    try {
+      const response = await fetch('https://api.github.com/repos/Carlymaxx/Maxx-tech');
+      const data = await response.json();
+      document.getElementById('fork-count').textContent =
+
+
+
 # Maxx-tech
 A WhatsApp bot with rich and multiple features created by carlymaxx.
 <a href="https://cooltext.com"><img src="https://images.cooltext.com/5741905.gif" width="415" height="94" alt="MAXX~XMD" /></a>
