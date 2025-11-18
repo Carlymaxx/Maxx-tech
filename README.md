@@ -19,7 +19,7 @@
    1. DEPLOYMENT
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Tap+fork+button+Bellow+To+Fork;MAXX+XMD+REPO+On+Github)](https://git.io/typing-svg)
 <div align="center">
-  <a href="https://github.com/vinpink2/maxx~xmd/fork">
+  <a href="https://github.com/Carlymaxx/Maxx-tech/fork">
     <img src="https://img.shields.io/badge/Fork%20The%20Repo-100000?style=for-the-badge&logo=scan&logoColor=red&labelColoryellow&color=darkblue" alt="FORK REPO"/>
   </a>
 </div>
