@@ -8,7 +8,7 @@ const AUTH_FOLDER = path.join(process.cwd(), "auth_info_baileys");
 
 // Keep bot alive on Heroku
 const app = express();
-app.get("/", (req, res) => res.send("Maxx-XMD is Online ✅"));
+app.get("/", (req, res) => res.send("MAXX-XMD is Online ✅"));
 app.listen(process.env.PORT || 3000);
 
 async function startBot() {

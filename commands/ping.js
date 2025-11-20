@@ -1,7 +1,7 @@
 module.exports = {
-  name: "ping",
-  description: "Check bot status",
-  execute: async (sock, sender) => {
-    await sock.sendMessage(sender, { text: "✅ MAXX~XMD is online!" });
-  }
+    name: "ping",
+    description: "Check bot status",
+    execute: async (sock, msg, args, chatId) => {
+        await sock.sendMessage(chatId, { text: "✅ MAXX~XMD is online!" }, { quoted: msg });
+    }
 };

@@ -1,6 +1,6 @@
 module.exports = {
-    name: "save",
-    description: "Save WhatsApp status",
+    name: "save",           // command name
+    desc: "Save WhatsApp status", // description
     execute: async (sock, msg, args, chatId) => {
         if (!args[0]) {
             return await sock.sendMessage(chatId, { text: "Example usage: .save 3" }, { quoted: msg });
@@ -9,8 +9,7 @@ module.exports = {
         let index = Number(args[0]) - 1;
 
         try {
-            // Replace with the correct method for fetching statuses
-            const statuses = await sock.getStatus(); // or sock.fetchStatus(chatId) depending on your WA version
+            const statuses = await sock.fetchStatus(chatId);
             if (!statuses || statuses.length === 0) {
                 return await sock.sendMessage(chatId, { text: "No statuses found." }, { quoted: msg });
             }

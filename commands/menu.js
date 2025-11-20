@@ -1,46 +1,50 @@
+const fs = require("fs");
+const path = require("path");
 const moment = require("moment-timezone");
 
-module.exports = {
-  name: "menu",
-  description: "Show bot menu and info",
-  execute: async (sock, sender) => {
-    const nairobiTime = moment().tz("Africa/Nairobi").format("HH:mm:ss");
-    const nairobiDate = moment().tz("Africa/Nairobi").format("YYYY-MM-DD");
-
-    await sock.sendMessage(sender, {
-      image: { url: "https://ibb.co/jZhpV4Vb.jpg" },
-      caption: `*MAXX~XMD Bot is Alive ✅*
-Welcome to the real bot made by Carly Maxx!
-
-🕒 Time (Nairobi, Ruiru): ${nairobiTime}
-📅 Date: ${nairobiDate}
-
-Type .ping to check bot status`
-    });
-  }
+// Optional: add your bot info here
+const BOT_INFO = {
+    botName: "MAXX~XMD Bot",
+    ownerName: "Carly Maxx",
+    prefix: "."
 };
+
 module.exports = {
     name: "menu",
     alias: ["help"],
-    desc: "Display bot menu",
-    run: async (sock, msg, args, from, info) => {
+    description: "Display bot menu dynamically",
+    execute: async (sock, msg, args, chatId) => {
+        const nairobiTime = moment().tz("Africa/Nairobi").format("HH:mm:ss");
+        const nairobiDate = moment().tz("Africa/Nairobi").format("YYYY-MM-DD");
+
+        // Load all commands dynamically
+        const commandsPath = path.join(__dirname);
+        const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith(".js"));
+
+        const commandList = commandFiles
+            .map(file => {
+                const cmd = require(path.join(commandsPath, file));
+                return cmd.name ? `• ${cmd.name}` : null;
+            })
+            .filter(Boolean)
+            .join("\n");
 
         const text = `
-┌──⭓ ${info.botName} MENU
+┌──⭓ ${BOT_INFO.botName} MENU
 │
-│ 👤 Owner: ${info.ownerName}
-│ 🆔 Prefix: ${info.prefix}
+│ 👤 Owner: ${BOT_INFO.ownerName}
+│ 🆔 Prefix: ${BOT_INFO.prefix}
+│ 🕒 Time (Nairobi, Ruiru): ${nairobiTime}
+│ 📅 Date: ${nairobiDate}
 │
 │ 📌 Available Commands:
-│ • menu
-│ • ping
-│ • welcome
-│ • goodbye
-│ • antidelete
-│
+${commandList}
 └──────────────⭓
         `;
 
-        await sock.sendMessage(from, { text }, { quoted: msg });
+        await sock.sendMessage(chatId, {
+            image: { url: "https://ibb.co/jZhpV4Vb.jpg" },
+            caption: text
+        }, { quoted: msg });
     }
 };

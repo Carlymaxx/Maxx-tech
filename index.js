@@ -1,79 +1,69 @@
-//  [MAXX-XMD EDITION]                                            
-//  >> WhatsApp Bot using Baileys (CommonJS)                           
-//  >> Scripted by Carly Maxx                                   
-//  >> Version: 8.3.5-maxx 
+// Maxx-XMD Edition (Fixed)
 
 const fs = require("fs");
 const path = require("path");
 const express = require("express");
-const { 
-    default: makeWASocket, 
-    useMultiFileAuthState, 
-    DisconnectReason 
+const qrcode = require("qrcode");
+const {
+    default: makeWASocket,
+    useMultiFileAuthState,
+    DisconnectReason
 } = require("@whiskeysockets/baileys");
 require("dotenv").config();
 
 const AUTH_FOLDER = path.join(__dirname, "auth_info_baileys");
 fs.mkdirSync(AUTH_FOLDER, { recursive: true });
 
+// --- EXPRESS (run once only) ---
+const app = express();
+app.get("/", (req, res) => res.send("MAXX-XMD is Online ✅"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 async function startBot() {
-    // Load WhatsApp auth state
     const { state, saveCreds } = await useMultiFileAuthState(AUTH_FOLDER);
 
     const sock = makeWASocket({
         auth: state,
-        printQRInTerminal: true // QR will print for linking
+        browser: ["Maxx-XMD", "Chrome", "1.0"]
     });
 
-    // Auto-save creds
     sock.ev.on("creds.update", saveCreds);
 
-    // Connection handling
-    sock.ev.on("connection.update", (update) => {
+    // --- SINGLE CLEAN CONNECTION HANDLER ---
+    sock.ev.on("connection.update", async (update) => {
         const { connection, lastDisconnect, qr } = update;
 
-        if (qr) console.log("\nScan this QR code with WhatsApp on your phone:\n", qr);
+        if (qr) {
+            console.log("\nScan this QR:\n");
+            qrcode.toString(qr, { type: "terminal", small: true }, (err, qrStr) => {
+                if (!err) console.log(qrStr);
+            });
+        }
 
-        if (connection === "open") console.log("✅ BOT CONNECTED!");
+        if (connection === "open") {
+            console.log("✅ BOT CONNECTED!");
+        }
+
         if (connection === "close") {
-            const shouldReconnect = lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut;
-            if (shouldReconnect) startBot();
+            const reason = lastDisconnect?.error?.output?.statusCode;
+
+            if (reason !== DisconnectReason.loggedOut) {
+                console.log("♻ Reconnecting...");
+                startBot();
+            } else {
+                console.log("❌ Logged out. Scan new QR.");
+                startBot();
+            }
         }
     });
-const qrcode = require("qrcode");
 
-sock.ev.on("connection.update", (update) => {
-    const { connection, lastDisconnect, qr } = update;
-
-    if (qr) {
-        // Print QR in terminal as block
-        qrcode.toString(qr, { type: "terminal", small: true }, (err, url) => {
-            if (err) console.error("QR Error:", err);
-            else console.log(url);
-        });
-    }
-
-    if (connection === "open") console.log("✅ WhatsApp bot connected!");
-    if (connection === "close") {
-        const shouldReconnect = (lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut);
-        if (shouldReconnect) startBot();
-    }
-});
-
-
-    // Express server
-    const app = express();
-    app.get("/", (req, res) => res.send("Maxx-XMD is Online ✅"));
-    const PORT = process.env.PORT || 3000;
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-    // Commands placeholder (if you have commands)
-    sock.commands = new Map(); // You can load commands dynamically here
+    // --- COMMAND HANDLER ---
+    sock.commands = new Map();
 
     sock.ev.on("messages.upsert", async ({ messages }) => {
-        if (!messages || messages.length === 0) return;
         const msg = messages[0];
-        if (!msg || !msg.key || !msg.message) return;
+        if (!msg || !msg.message) return;
 
         const chatId = msg.key.remoteJid;
         let text =
@@ -85,7 +75,7 @@ sock.ev.on("connection.update", (update) => {
 
         if (!text.startsWith(".")) return;
 
-        const args = text.slice(1).trim().split(/ +/);
+        const args = text.slice(1).trim().split(/\s+/);
         const cmdName = args.shift().toLowerCase();
 
         const command = sock.commands.get(cmdName);
@@ -100,5 +90,5 @@ sock.ev.on("connection.update", (update) => {
     });
 }
 
-// Start the bot
+// Start the bot once
 startBot();
