@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxx-XMD Session Generator</title>
+<style>
+body { font-family: Arial; text-align: center; padding: 50px; }
+input, button { padding: 10px; font-size: 16px; margin: 10px; }
+</style>
+</head>
+<body>
+<h1>Maxx-XMD Session Generator</h1>
+<p>Type your WhatsApp number (with country code, e.g., 2547xxxxxxx):</p>
+<input type="text" id="number" placeholder="2547xxxxxxx" />
+<button onclick="generateOTP()">Generate OTP</button>
+<p id="msg"></p>
+
+<script>
+async function generateOTP() {
+    const number = document.getElementById('number').value.trim();
+    if (!number) return alert('Please type your number');
+
+    const res = await fetch('/generate-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ number })
+    });
+    const text = await res.text();
+    document.getElementById('msg').innerText = text;
+}
+</script>
+</body>
+</html>
