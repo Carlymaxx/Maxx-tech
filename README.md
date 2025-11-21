@@ -73,7 +73,7 @@ Deploy your own bot easily using one of the platforms below:
 Deploy your own bot easily using one of the platforms below:
 
 [![Render Deploy](https://img.shields.io/badge/RENDER-DEPLOY-1f1f1f?style=for-the-badge&logo=render)](https://render.com/deploy?repo=https://github.com/maxxy1470/CAILLMAXX)  
-[![Heroku Deploy](https://img.shields.io/badge/HEROKU-DEPLOY-430098?style=for-the-badge&logo=heroku)](https://heroku.com/deploy?template=https://github.com/maxxy1470/CAILLMAXX)  
+[![Heroku Deploy](https://img.shields.io/badge/HEROKU-DEPLOY-430098?style=for-the-badge&logo=heroku)](https://heroku.com/deploy?template=https://github.com/Carlymaxx/Maxx-tech.git 
 [![Vercel Deploy](https://img.shields.io/badge/VERCEL-DEPLOY-000000?style=for-the-badge&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/maxxy1470/CAILLMAXX)  
 [![Railway Deploy](https://img.shields.io/badge/RAILWAY-DEPLOY-ec4c2d?style=for-the-badge&logo=railway)](https://railway.app/new/template?template=https://github.com/maxxy1470/CAILLMAXX)  
 [![Run on Termux](https://img.shields.io/badge/TERMUX-RUN-00ff00?style=for-the-badge&logo=android)](https://termux.dev)
