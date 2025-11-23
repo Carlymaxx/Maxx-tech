@@ -255,3 +255,89 @@ Deploy your own bot easily using one of the platforms below:
   <img src="https://heroku-badge.herokuapp.com/lake" alt="Bot Status"/><br/>
   🤖 Bot Alive Status
 </p>
+
+
+<!-- MAXX TECH Dashboard Badges Section -->
+<div style="
+  max-width: 900px; 
+  margin: 20px auto; 
+  padding: 25px; 
+  background: #1e1e1e; 
+  border-radius: 15px; 
+  box-shadow: 0 0 20px rgba(0,255,255,0.2); 
+  color: #fff; 
+  text-align: left; 
+  font-family: Arial, sans-serif;
+  animation: glowBorder 2s infinite alternate;
+">
+
+  <h2 style="color: #00ffff;">📊 MAXX TECH Repo & Bot Status</h2>
+
+  <!-- Badges -->
+  <p>
+    <img src="https://img.shields.io/github/stars/Carlymaxx/Maxx-tech?style=for-the-badge&color=ffcc00&logo=github&logoColor=white" 
+         alt="GitHub Stars" class="glow-badge"/> &nbsp;&nbsp;
+
+    <img src="https://img.shields.io/github/followers/Carlymaxx?style=for-the-badge&color=00ff99&logo=github&logoColor=white" 
+         alt="Followers" class="glow-badge"/> &nbsp;&nbsp;
+
+    <img src="https://img.shields.io/github/issues/Carlymaxx/Maxx-tech?style=for-the-badge&color=ff3300&logo=github&logoColor=white" 
+         alt="Open Issues" class="glow-badge"/> &nbsp;&nbsp;
+
+    <img src="https://img.shields.io/github/license/Carlymaxx/Maxx-tech?style=for-the-badge&color=9900ff&logo=github&logoColor=white" 
+         alt="License" class="glow-badge"/> &nbsp;&nbsp;
+
+    <img src="https://heroku-badge.herokuapp.com/lake" alt="Bot Status" class="glow-badge"/> &nbsp;&nbsp;
+
+    <img src="https://img.shields.io/badge/WhatsApp-Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" 
+         alt="WhatsApp Channel" class="glow-badge"/> &nbsp;&nbsp;
+
+    <img src="https://img.shields.io/badge/WhatsApp-Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" 
+         alt="WhatsApp Group" class="glow-badge"/>
+  </p>
+
+  <!-- Contact & Credits -->
+  <p style="line-height: 1.8;">
+    📧 Email: <a href="mailto:maxxtechxmd@gmail.com" class="animated-link">maxxtechxmd@gmail.com</a><br/>
+    📞 Support: <a href="tel:+254725979273" class="animated-link">+254725979273</a><br/>
+    🏷️ GitHub Repo: <a href="https://github.com/Carlymaxx/Maxx-tech.git" target="_blank" class="animated-link">https://github.com/Carlymaxx/Maxx-tech.git</a>
+  </p>
+
+  <p style="font-weight: bold; margin-top: 15px;">
+    Made with 💥 by Maxx | Powered by EXTREAME--XMD
+  </p>
+</div>
+
+<!-- Animations CSS -->
+<style>
+@keyframes glowBorder {
+  from { box-shadow: 0 0 20px rgba(0,255,255,0.2); }
+  to { box-shadow: 0 0 35px rgba(0,255,255,0.6); }
+}
+
+.glow-badge {
+  animation: glowBadge 2s infinite alternate;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+@keyframes glowBadge {
+  from { filter: drop-shadow(0 0 5px #00ffcc); }
+  to { filter: drop-shadow(0 0 15px #00ffcc); }
+}
+
+.glow-badge:hover {
+  transform: scale(1.1);
+}
+
+.animated-link {
+  color: #00ffff;
+  text-decoration: none;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.animated-link:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 8px #00ffff;
+}
+</style>
