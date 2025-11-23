@@ -266,4 +266,20 @@ Deploy your own bot easily using one of the platforms below:
  📞 Support: [+254725979273](tel:+254725979273)   
 🏷️ GitHub Repo: [Maxx Tech](https://github.com/Carlymaxx/Maxx-tech.git)  
 
+
+
+## 🙏 Thanks For Using MAXX~XMD
+
+We 💖 your support and encourage you to:
+- ⭐ Star the project
+- 🔄 Share it with others
+- 🚀 Contribute improvements
+
+<p align="center">
+  <img src="https://img.shields.io/https://github.com/Carlymaxx/Maxx-tech.git?style=social" alt="GitHub Stars"/>
+</p>
+
+<p align="center"><strong>Made with 💥 by MAXX  | Powered by MAXX TECH</strong></p>
+
+
 **Made with 💥 by Maxx | Powered by EXTREAME--XMD**--XMD**
