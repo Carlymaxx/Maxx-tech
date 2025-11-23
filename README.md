@@ -42,8 +42,6 @@
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
-<p align="center">🌐 **Made with ❤️ by MAXX TECH** – <a href="https://github.com/Carlymaxx/Maxx-tech.git">Check the Repo</a></p>
-
 
 
 # Maxx-tech
