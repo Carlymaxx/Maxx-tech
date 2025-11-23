@@ -263,7 +263,7 @@ Deploy your own bot easily using one of the platforms below:
 [![Group](https://img.shields.io/badge/WhatsApp-Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/BWZOtIlbZoJ9Xt8lgxxbqQ)  
 
 📧 Email: [maxxtechxmd@gmail.com](mailto:maxxtechxmd@gmail.com)  
-📞 Support: [+254725979273](tel:+254725979273)  
+ 📞 Support: [+254725979273](tel:+254725979273)   
 🏷️ GitHub Repo: [Maxx Tech](https://github.com/Carlymaxx/Maxx-tech.git)  
 
 **Made with 💥 by Maxx | Powered by EXTREAME--XMD**--XMD**
