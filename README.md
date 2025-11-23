@@ -217,19 +217,6 @@ Deploy your own bot easily using one of the platforms below:
 
 
 
-
-
-## 📥 INSTALLATION (TERMUX)
-
-```bash
-pkg update && pkg upgrade -y
-pkg install git nodejs -y
-git clone https://github.com/Carlymaxx/Maxx-tech
-cd Maxx-tech
-npm install
-npm start
-
-
 ---
 
 <!DOCTYPE html>
