@@ -188,6 +188,12 @@ cd Maxx-tech
 npm install
 npm start
 
+
+
+
+
+
+
 ### 🪄 Get your Session ID easily:
 
 [![Session ID](https://img.shields.io/badge/SESSIONID-GET-ffb703?style=for-the-badge&logo=javascript)](https://maxx-xmdrepo.onrender.com)
