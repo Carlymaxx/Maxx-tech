@@ -85,7 +85,7 @@ Deploy your own bot easily using one of the platforms below:
 
 Deploy your own bot easily using one of the platforms below:
 
-<h1 align="center">🔥 MAXX TECH 🔥</h1>
+<<h1 align="center">🔥 MAXX TECH 🔥</h1>
 <p align="center">
   <b>A WhatsApp Multi-Device bot with powerful automation tools and APIs — powered by MAXX TECH</b>
 </p>
@@ -132,6 +132,8 @@ Deploy your own bot easily using one of the platforms below:
 - 🎵 Audio & video manipulation  
 - 📁 Cloud-based session storage  
 - 🧩 Fully customizable modules  
+- 🔐 Secure QR/session management  
+- 🌐 Web-based deployment support  
 
 ---
 
@@ -144,7 +146,6 @@ git clone https://github.com/Carlymaxx/Maxx-tech
 cd Maxx-tech
 npm install
 npm start
----
 
 ### 🪄 Get your Session ID easily:
 
