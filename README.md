@@ -256,15 +256,14 @@ Deploy your own bot easily using one of the platforms below:
   🤖 Bot Alive Status
 </p>
 
-
 🌐 WhatsApp Channel:  
-![Channel](https://img.shields.io/badge/WhatsApp-Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)  
+[![Channel](https://img.shields.io/badge/WhatsApp-Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029Vb6XNTjAInPblhlwnm2J)  
 
 💬 WhatsApp Group:  
-![Group](https://img.shields.io/badge/WhatsApp-Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)  
+[![Group](https://img.shields.io/badge/WhatsApp-Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/BWZOtIlbZoJ9Xt8lgxxbqQ)  
 
 📧 Email: [maxxtechxmd@gmail.com](mailto:maxxtechxmd@gmail.com)  
 📞 Support: [+254725979273](tel:+254725979273)  
 🏷️ GitHub Repo: [Maxx Tech](https://github.com/Carlymaxx/Maxx-tech.git)  
 
-**Made with 💥 by Maxx | Powered by EXTREAME--XMD**
+**Made with 💥 by Maxx | Powered by EXTREAME--XMD**--XMD**
