@@ -279,7 +279,7 @@ We 💖 your support and encourage you to:
   <img src="https://img.shields.io/https://github.com/Carlymaxx/Maxx-tech.git?style=social" alt="GitHub Stars"/>
 </p>
 
-<p align="center"><strong>MAXX</strong></p>
 
 
-**Made 💥 by Maxx | Powered by *MAXX TECH**
+
+           *Made 💥 by Maxx | Powered by *MAXX TECH**
