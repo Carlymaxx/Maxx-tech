@@ -1,16 +1,48 @@
-<details>
-<summary>⚡🔥 MAXX TECH ALERT! TAP TO READ 🔥⚡</summary>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
-🚀 **Deploying VPS/Panel?** Download the ZIP here or your YouTube tools won’t work:  
-<a href="https://github.com/Carlymaxx/Maxx-tech/archive/refs/heads/main.zip">
+<h1 align="center">⚡🔥 𝐌𝐀𝐗𝐗 𝐓𝐄𝐂𝐇 𝐕𝐄𝐑𝐒𝐈𝐎𝐍 5.0.0 🔥⚡</h1>
+
+<p align="center">🚀 **Safe for Heroku** – No questions, just deploy & enjoy! 💎</p>
+
+<details>
+<summary>⚠️ 🚨 TAP TO READ IMPORTANT NOTICE 🚨 ⚠️</summary>
+
+- ⚡ **For VPS/Panel Deployment:** You **must download the ZIP** from the panel sections or from the link below, otherwise your **YouTube tools won’t work**!  
+
+<a href="https://github.com/Carlymaxx/Maxx-tech.git">
   <img src="https://img.shields.io/badge/DOWNLOAD%20ZIP-yellow" alt="Panel Zip File" width="150">
 </a>
 
-💎 Add your **premium/unlimited API key** in `config.js` / `.env` / `app.json` (Heroku) to **avoid free API limits**.  
+- 💡 **Pro Tip:** Add your **premium/unlimited API key** in `config.js` / `.env` / `app.json` (Heroku) to **avoid free API limits**.  
 
-🌐 Made for **MAXX TECH** – GitHub: <a href="https://github.com/Carlymaxx/Maxx-tech.git">Click Here</a>
 </details>
 
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
+<p align="center">
+<a href="https://github.com/Carlymaxx/Maxx-tech.git">
+  <img title="GITHUB" src="https://img.shields.io/badge/GITHUB-MAXX TECH-red.svg?style=for-the-badge&logo=github">
+</a>
+</p>
+
+<p align="center">
+<a href="https://github.com/Carlymaxx?tab=followers">
+  <img title="Followers" src="https://img.shields.io/github/followers/Carlymaxx?label=Followers&style=social">
+</a>
+<a href="https://github.com/Carlymaxx/Maxx-tech/stargazers/">
+  <img title="STARS" src="https://img.shields.io/github/stars/Carlymaxx/Maxx-tech?&style=social">
+</a>
+<a href="https://github.com/Carlymaxx/Maxx-tech/network/members">
+  <img title="Forks" src="https://img.shields.io/github/forks/Carlymaxx/Maxx-tech?style=social">
+</a>
+<a href="https://github.com/Carlymaxx/Maxx-tech/watchers">
+  <img title="Watching" src="https://img.shields.io/github/watchers/Carlymaxx/Maxx-tech?label=Watching&style=social">
+</a>
+</p>
+
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
+<p align="center">🌐 **Made with ❤️ by MAXX TECH** – <a href="https://github.com/Carlymaxx/Maxx-tech.git">Check the Repo</a></p>
 
 
 
