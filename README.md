@@ -218,26 +218,30 @@ Deploy your own bot easily using one of the platforms below:
 <<!-- Maxx Tech Repo & Bot Status -->
 <h2 align="center">📊 Maxx Tech Repo & Bot Status</h2>
 
-<!-- First Row: Horizontal -->
-<p align="center">
-  👀 Profile Views: 
-  <img src="https://komarev.com/ghpvc/?username=Carlymaxx&label=Profile+Views&color=0e75b6&style=for-the-badge" alt="Profile views"/> &nbsp;&nbsp;
-  
-  🧑‍🤝‍🧑 Followers: 
-  <img src="https://img.shields.io/github/followers/Carlymaxx?label=Followers&style=for-the-badge&color=00ff99&logo=github&logoColor=white&logoWidth=20" alt="GitHub Followers"/> &nbsp;&nbsp;
-  
-  ⭐ Stars: 
-  <img src="https://img.shields.io/github/stars/Carlymaxx/Maxx-tech?label=Stars&style=for-the-badge&color=ffcc00&logo=github&logoColor=white&logoWidth=20" alt="GitHub Stars"/>
-</p>
 
-<!-- Second Row: Horizontal -->
+
+
+
+
+<!-- Maxx Tech Repo & Bot Status -->
+<h2 align="center">📊 Maxx Tech Repo & Bot Status</h2>
+
 <p align="center">
-  🐞 Open Issues: 
-  <img src="https://img.shields.io/github/issues/Carlymaxx/Maxx-tech?label=Open+Issues&style=for-the-badge&color=ff3300&logo=github&logoColor=white&logoWidth=20" alt="Open Issues"/> &nbsp;&nbsp;
+  👀 Profile Views:<br/>
+  <img src="https://komarev.com/ghpvc/?username=Carlymaxx&label=Profile+Views&color=0e75b6&style=for-the-badge" alt="Profile views"/><br/><br/>
   
-  📝 License: 
-  <img src="https://img.shields.io/github/license/Carlymaxx/Maxx-tech?style=for-the-badge&color=9900ff&logo=github&logoColor=white&logoWidth=20" alt="License"/> &nbsp;&nbsp;
+  🧑‍🤝‍🧑 Followers:<br/>
+  <img src="https://img.shields.io/github/followers/Carlymaxx?label=Followers&style=for-the-badge&color=00ff99&logo=github&logoColor=white&logoWidth=20" alt="GitHub Followers"/><br/><br/>
   
-  🤖 Bot Alive Status: 
+  ⭐ Stars:<br/>
+  <img src="https://img.shields.io/github/stars/Carlymaxx/Maxx-tech?label=Stars&style=for-the-badge&color=ffcc00&logo=github&logoColor=white&logoWidth=20" alt="GitHub Stars"/><br/><br/>
+  
+  🐞 Open Issues:<br/>
+  <img src="https://img.shields.io/github/issues/Carlymaxx/Maxx-tech?label=Open+Issues&style=for-the-badge&color=ff3300&logo=github&logoColor=white&logoWidth=20" alt="Open Issues"/><br/><br/>
+  
+  📝 License:<br/>
+  <img src="https://img.shields.io/github/license/Carlymaxx/Maxx-tech?style=for-the-badge&color=9900ff&logo=github&logoColor=white&logoWidth=20" alt="License"/><br/><br/>
+  
+  🤖 Bot Alive Status:<br/>
   <img src="https://heroku-badge.herokuapp.com/lake" alt="Bot Status"/>
 </p>
