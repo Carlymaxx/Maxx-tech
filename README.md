@@ -186,6 +186,39 @@ Deploy your own bot easily using one of the platforms below:
 
 ---
 
+
+
+
+# 🚀 CAILLMAXX WhatsApp Bot 🤖
+
+**Available 24/7 for your digital needs**
+
+[![Session ID](https://img.shields.io/badge/SESSIONID-GET-ffb703?style=for-the-badge&logo=javascript)](https://maxx-xmdrepo.onrender.com)
+
+---
+
+## 🌐 Live Demo
+[Check out the bot live here](https://whatsapp-bot-site.vercel.app/)
+
+---
+
+## ⚡ Features
+
+- ![Always Online](https://img.shields.io/badge/Always_Online-Active-brightgreen?style=for-the-badge&logo=ghost&logoColor=white&color=00ff00&labelColor=000000&animation=glow) **Always Online 🟢**
+- ![Auto Typing](https://img.shields.io/badge/Auto_Typing-Enabled-yellow?style=for-the-badge&logo=keyboard&logoColor=white&color=ffff00&labelColor=000000&animation=glow) **Auto Typing ✍️**
+- ![Auto Recording](https://img.shields.io/badge/Auto_Recording-On-orange?style=for-the-badge&logo=microphone&logoColor=white&color=ff7f00&labelColor=000000&animation=glow) **Auto Recording 🎙️**
+- ![Auto Status View](https://img.shields.io/badge/Auto_Status_View-Yes-blue?style=for-the-badge&logo=eye&logoColor=white&color=007fff&labelColor=000000&animation=glow) **Auto Status View 👀**
+- ![Auto Status React](https://img.shields.io/badge/Auto_Status_React-Yes-purple?style=for-the-badge&logo=smile&logoColor=white&color=8f00ff&labelColor=000000&animation=glow) **Auto Status React 😎**
+- ![Auto Responses](https://img.shields.io/badge/Auto_Responses-Yes-lightgrey?style=for-the-badge&logo=robot&logoColor=white&color=cccccc&labelColor=000000&animation=glow) **Auto Responses 🤖**
+
+---
+
+
+
+
+
+
+
 ## 📥 INSTALLATION (TERMUX)
 
 ```bash
