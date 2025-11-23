@@ -192,7 +192,7 @@ npm start
 
 
 
-
+<p align="center">
 
 ### 🪄 Get your Session ID easily:
 
