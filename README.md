@@ -214,6 +214,27 @@ Deploy your own bot easily using one of the platforms below:
 - ![Auto Responses](https://img.shields.io/badge/Auto_Responses-Yes-lightgrey?style=for-the-badge&logo=robot&logoColor=white&color=cccccc&labelColor=000000&animation=glow) **Auto Responses 🤖**
 
 ---
+<!-- Maxx Tech Repo & Bot Status -->
+<h2 align="center">📊 Maxx Tech Repo & Bot Status</h2>
+<p align="center">
+  👀 Profile Views: 
+  <img src="https://komarev.com/ghpvc/?username=Carlymaxx&label=Profile+Views&color=0e75b6&style=for-the-badge" alt="Profile views"/> &nbsp;
+
+  🧑‍🤝‍🧑 Followers: 
+  <img src="https://img.shields.io/github/followers/Carlymaxx?label=Followers&style=for-the-badge&color=00ff99&logo=github&logoColor=white" alt="GitHub Followers"/> &nbsp;
+
+  ⭐ Stars: 
+  <img src="https://img.shields.io/github/stars/Carlymaxx/Maxx-tech?label=Stars&style=for-the-badge&color=ffcc00&logo=github&logoColor=white" alt="GitHub Stars"/> &nbsp;
+
+  🐞 Open Issues: 
+  <img src="https://img.shields.io/github/issues/Carlymaxx/Maxx-tech?label=Open+Issues&style=for-the-badge&color=ff3300&logo=github&logoColor=white" alt="Open Issues"/> &nbsp;
+
+  📝 License: 
+  <img src="https://img.shields.io/github/license/Carlymaxx/Maxx-tech?style=for-the-badge&color=9900ff&logo=github&logoColor=white" alt="License"/> &nbsp;
+
+  🤖 Bot Alive Status: 
+  <img src="https://heroku-badge.herokuapp.com/lake" alt="Bot Status"/>
+</p>
 
 
 
