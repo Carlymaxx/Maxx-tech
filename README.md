@@ -1,14 +1,5 @@
 
 
-<div align="center">
-  <a href="https://github.com/Carlymaxx/Maxx-tech/fork">
-    <img src="https://img.shields.io/badge/Fork%20The%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&color=blue" alt="FORK REPO"/>
-  </a>
-</div>[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Tap+fork+button+Below+To+Fork;MAXX+TECH+REPO+On+Github)](https://github.com/Carlymaxx/Maxx-tech/fork)
-
-
-
-
 
 
 
@@ -61,6 +52,14 @@ A WhatsApp bot with rich and multiple features created by carlymaxx.
 DON'T FORGET TO FORK 🍴 & STAR 🌟 OUR REPO🫠
 ```
 ---
+<div align="center">
+  <a href="https://github.com/Carlymaxx/Maxx-tech/fork">
+    <img src="https://img.shields.io/badge/Fork%20The%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&color=blue" alt="FORK REPO"/>
+  </a>
+</div>
+
+
+
 
 > **CURRENT BOT VERSION ➜ `2.0.9 ⚡`**
 ---
