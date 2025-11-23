@@ -1,3 +1,17 @@
+
+
+<div align="center">
+  <a href="https://github.com/Carlymaxx/Maxx-tech/fork">
+    <img src="https://img.shields.io/badge/Fork%20The%20Repo-100000?style=for-the-badge&logo=github&logoColor=white&color=blue" alt="FORK REPO"/>
+  </a>
+</div>[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Tap+fork+button+Below+To+Fork;MAXX+TECH+REPO+On+Github)](https://github.com/Carlymaxx/Maxx-tech/fork)
+
+
+
+
+
+
+
 # Maxx-tech
 A WhatsApp bot with rich and multiple features created by carlymaxx.
 <a href="https://cooltext.com"><img src="https://images.cooltext.com/5741905.gif" width="415" height="94" alt="MAXX~XMD" /></a>
