@@ -257,40 +257,6 @@ Deploy your own bot easily using one of the platforms below:
 </p>
 
 
-<
-}
-
-.animated-link {
-  color: #00ffff;
-  text-decoration: none;
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
-}
-
-.animated-link:hover {
-  transform: scale(1.05);
-  text-shadow: 0 0 8px #00ffff;
-}
-</style## 📊 MAXX TECH Repo & Bot Status
-
-<!-- Badges Row 1 -->
-👀 Profile Views:  
-![Profile Views](https://komarev.com/ghpvc/?username=Carlymaxx&label=Profile+Views&color=0e75b6&style=for-the-badge)  
-
-⭐ Stars:  
-![GitHub Stars](https://img.shields.io/github/stars/Carlymaxx/Maxx-tech?style=for-the-badge&color=ffcc00&logo=github&logoColor=white)  
-
-🧑‍🤝‍🧑 Followers:  
-![Followers](https://img.shields.io/github/followers/Carlymaxx?style=for-the-badge&color=00ff99&logo=github&logoColor=white)  
-
-🐞 Open Issues:  
-![Open Issues](https://img.shields.io/github/issues/Carlymaxx/Maxx-tech?style=for-the-badge&color=ff3300&logo=github&logoColor=white)  
-
-📝 License:  
-![License](https://img.shields.io/github/license/Carlymaxx/Maxx-tech?style=for-the-badge&color=9900ff&logo=github&logoColor=white)  
-
-🤖 Bot Status:  
-![Bot Status](https://heroku-badge.herokuapp.com/lake)  
-
 🌐 WhatsApp Channel:  
 ![Channel](https://img.shields.io/badge/WhatsApp-Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)  
 
