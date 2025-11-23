@@ -1,4 +1,15 @@
+<details>
+<summary>⚡🔥 MAXX TECH ALERT! TAP TO READ 🔥⚡</summary>
 
+🚀 **Deploying VPS/Panel?** Download the ZIP here or your YouTube tools won’t work:  
+<a href="https://github.com/Carlymaxx/Maxx-tech/archive/refs/heads/main.zip">
+  <img src="https://img.shields.io/badge/DOWNLOAD%20ZIP-yellow" alt="Panel Zip File" width="150">
+</a>
+
+💎 Add your **premium/unlimited API key** in `config.js` / `.env` / `app.json` (Heroku) to **avoid free API limits**.  
+
+🌐 Made for **MAXX TECH** – GitHub: <a href="https://github.com/Carlymaxx/Maxx-tech.git">Click Here</a>
+</details>
 
 
 
