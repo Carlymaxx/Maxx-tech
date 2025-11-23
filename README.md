@@ -283,3 +283,5 @@ We 💖 your support and encourage you to:
 
 
            *Made 💥 by Maxx | Powered by *MAXX TECH**
+
+                       ©maxxtech2025
