@@ -275,9 +275,6 @@ We 💖 your support and encourage you to:
 - 🔄 Share it with others
 - 🚀 Contribute improvements
 
-<p align="center">
-  <img src="https://img.shields.io/https://github.com/Carlymaxx/Maxx-tech.git?style=social" alt="GitHub Stars"/>
-</p>
 
 
 
