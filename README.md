@@ -291,5 +291,7 @@ We 💖 your support and encourage you to:
 
 <p align="center">
   **Made 💥 by Maxx | Powered by MAXX TECH**  
-  © 2025 maxxtech
+ 
+
+                       © 2025 maxxtech
 </p>
