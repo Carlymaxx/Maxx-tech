@@ -85,12 +85,65 @@ Deploy your own bot easily using one of the platforms below:
 
 Deploy your own bot easily using one of the platforms below:
 
-[![Render Deploy](https://img.shields.io/badge/RENDER-DEPLOY-1f1f1f?style=for-the-badge&logo=render)](https://render.com/deploy?repo=https://github.com/maxxy1470/CAILLMAXX)  
-[![Heroku Deploy](https://img.shields.io/badge/HEROKU-DEPLOY-430098?style=for-the-badge&logo=heroku)](https://heroku.com/deploy?template=https://github.com/Carlymaxx/Maxx-tech.git 
-[![Vercel Deploy](https://img.shields.io/badge/VERCEL-DEPLOY-000000?style=for-the-badge&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/maxxy1470/CAILLMAXX)  
-[![Railway Deploy](https://img.shields.io/badge/RAILWAY-DEPLOY-ec4c2d?style=for-the-badge&logo=railway)](https://railway.app/new/template?template=https://github.com/maxxy1470/CAILLMAXX)  
+<h1 align="center">🔥 MAXX TECH 🔥</h1>
+<p align="center">
+  <b>A WhatsApp Multi-Device bot with powerful automation tools and APIs — powered by MAXX TECH</b>
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/dBaSKWF.gif" width="100%" height="40">
+</p>
+
+---
+
+## 🚀 DEPLOYMENTS
+
+### 🔵 Render
+[![Render Deploy](https://img.shields.io/badge/RENDER-DEPLOY-1f1f1f?style=for-the-badge&logo=render)](https://render.com/deploy?repo=https://github.com/Carlymaxx/Maxx-tech)
+
+### 🟣 Heroku
+[![Heroku Deploy](https://img.shields.io/badge/HEROKU-DEPLOY-430098?style=for-the-badge&logo=heroku)](https://heroku.com/deploy?template=https://github.com/Carlymaxx/Maxx-tech)
+
+### ⚫ Vercel
+[![Vercel Deploy](https://img.shields.io/badge/VERCEL-DEPLOY-000000?style=for-the-badge&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/Carlymaxx/Maxx-tech)
+
+### 🔴 Railway
+[![Railway Deploy](https://img.shields.io/badge/RAILWAY-DEPLOY-ec4c2d?style=for-the-badge&logo=railway)](https://railway.app/new/template?template=https://github.com/Carlymaxx/Maxx-tech)
+
+### 🟢 Termux
 [![Run on Termux](https://img.shields.io/badge/TERMUX-RUN-00ff00?style=for-the-badge&logo=android)](https://termux.dev)
 
+---
+
+## 🍴 FORK THE REPO
+<p align="center">
+  <a href="https://github.com/Carlymaxx/Maxx-tech/fork">
+    <img src="https://img.shields.io/badge/Fork%20The%20Repo-blue?style=for-the-badge&logo=github" />
+  </a>
+</p>
+
+---
+
+## ✨ FEATURES
+- 🔥 Multi-Device WhatsApp automation  
+- ⚡ Fast API-powered tools  
+- 🧠 AI tools + media processing  
+- 🛠️ Auto-commands + sticker tools  
+- 🎵 Audio & video manipulation  
+- 📁 Cloud-based session storage  
+- 🧩 Fully customizable modules  
+
+---
+
+## 📥 INSTALLATION (TERMUX)
+
+```bash
+pkg update && pkg upgrade -y
+pkg install git nodejs -y
+git clone https://github.com/Carlymaxx/Maxx-tech
+cd Maxx-tech
+npm install
+npm start
 ---
 
 ### 🪄 Get your Session ID easily:
