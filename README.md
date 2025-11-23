@@ -149,7 +149,7 @@ npm start
 
 ### 🪄 Get your Session ID easily:
 
-[![Session [![Session ID](https://img.shields.io/badge/SESSIONID-GET-ffb703?style=for-the-badge&logo=javascript)](https://maxx-xmdrepo.onrender.com)
+[![Session ID](https://img.shields.io/badge/SESSIONID-GET-ffb703?style=for-the-badge&logo=javascript)](https://maxx-xmdrepo.onrender.com)
 
 🚀 CAILLMAXX WhatsApp Bot 🤖
 
