@@ -224,9 +224,9 @@ Deploy your own bot easily using one of the platforms below:
 
 
 <!-- Maxx Tech Repo & Bot Status -->
-<h2 align="center">📊 Maxx Tech Repo & Bot Status</h2>
+<h2 align="left">📊 Maxx Tech Repo & Bot Status</h2>
 
-<p align="center">
+<p align="left">
   👀 Profile Views:<br/>
   <img src="https://komarev.com/ghpvc/?username=Carlymaxx&label=Profile+Views&color=0e75b6&style=for-the-badge" alt="Profile views"/><br/><br/>
   
