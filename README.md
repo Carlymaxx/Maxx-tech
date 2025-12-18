@@ -192,10 +192,12 @@ Deploy your own bot easily using one of the platforms below:
 # 🚀 CAILLMAXX WhatsApp Bot 🤖
 
 **Available 24/7 for your digital needs**
+
+
+
 [![Session ID](https://img.shields.io/badge/SESSIONID-GET-ffb703?style=for-the-badge&logo=javascript)](https://pairmaxxxmd.onrender.com/)
 
 
----
 
 ## 🌐 Live Demo
 [Check out the bot live here](https://whatsapp-bot-site.vercel.app/)
