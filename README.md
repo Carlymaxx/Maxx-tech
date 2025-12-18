@@ -193,7 +193,7 @@ Deploy your own bot easily using one of the platforms below:
 
 **Available 24/7 for your digital needs**
 
-[![Session ID](https://img.shields.io/badge/SESSIONID-GET-ffb703?style=for-the-badge&logo=javascript)](https://maxx-xmdrepo.onrender.com)
+[![Session ID](https://img.shields.io/badge/SESSIONID-GET-ffb703?style=for-the-badge&logo=javascript)]([https://maxx-xmdrepo.onrender.com](https://pairmaxxxmd.onrender.com/))
 
 ---
 
