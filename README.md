@@ -195,7 +195,7 @@ Deploy your own bot easily using one of the platforms below:
 
 
 
-[![Session ID](https://img.shields.io/badge/SESSIONID-GET-ffb703?style=for-the-badge&logo=javascript)](https://pairmaxxxmd.onrender.com/)
+[![Session ID](https://img.shields.io/badge/SESSIONID-GET-ffb703?style=for-the-badge&logo=javascript)](https://maxxtechxmd-mkuuwamo.replit.app/pair)
 
 
 
